@@ -14,7 +14,8 @@ namespace FamilyStructure_1.Class
         public enum GenderType
         {
             Female,
-            Male
+            Male,
+            Unknown
         }
         public enum RelationlistName
         {
