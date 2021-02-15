@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace FamilyStructure_1.Class
 {
     [Serializable]
-    public  class ClsPersonalInfo:IEnumerable<ClsPersonalInfo>
+    public  class ClsPersonalInfo 
     {
         
         public enum GenderType
@@ -36,27 +36,20 @@ namespace FamilyStructure_1.Class
             MotherInLaw = 15,
             FatherInLaw = 16,
 
-        }
-   
+        }   
         public int Id { get; set; }
-        public int ParantId { get; set; } 
-        public bool IsPrimary { get; set; }
-        public  List<ClsPersonalInfo> Family = new List<ClsPersonalInfo>();
+        public int ParantId { get; set; }        
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }
-        public virtual DateTime BirthDate { get; set; }
-        public virtual string Sorting { get; set; }
-        public virtual int RelationIndex { get; set; }
+        public virtual DateTime BirthDate { get; set; }         
         public virtual RelationlistName RelationName { get; set; }
-        public virtual GenderType Gender { get; set; }
+        public virtual GenderType Gender { get; set; } 
+        public  List<ClsPersonalInfo> Family = new List<ClsPersonalInfo>();
         public IEnumerator<ClsPersonalInfo> GetEnumerator()
         {
             return Family.GetEnumerator();
         }
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-           
+        
+
     }
 }

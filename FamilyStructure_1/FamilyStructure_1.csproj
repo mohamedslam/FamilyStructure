@@ -47,6 +47,7 @@
     <Compile Include="Class\ClsFamilyData.cs" />
     <Compile Include="Class\ClsPersonalInfo.cs" />
     <Compile Include="Class\IFamily_Members.cs" />
+    <Compile Include="ClsOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

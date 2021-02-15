@@ -18,7 +18,7 @@ namespace FamilyStructure_1.Class
             PersonsDataList = new List<ClsPersonalInfo>() {
           new ClsPersonalInfo()
           {
-              Id = 1, Gender =  GenderType.Male, FirstName = "Mohamed", LastName = "Sallam", IsPrimary = true,  RelationName = ClsPersonalInfo.RelationlistName.Person, BirthDate = DateTime.Parse("02/02/1980")
+              Id = 1, Gender =  GenderType.Male, FirstName = "Mohamed", LastName = "Sallam",  RelationName = ClsPersonalInfo.RelationlistName.Person, BirthDate = DateTime.Parse("02/02/1980")
           },
           new ClsPersonalInfo()
           {
