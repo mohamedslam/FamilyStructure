@@ -160,7 +160,6 @@ namespace FamilyStructure_1.Class
                 return false;
             }
         }
-
         public bool AddFamilyMembars(int IdParant, ClsPersonalInfo _DataPerson)
         {
             var _rst = new ClsPersonalInfo();
@@ -171,5 +170,6 @@ namespace FamilyStructure_1.Class
             _rst.PersonsDataList.Add(_DataPerson);
             return true;
         }
+
     }
 }
