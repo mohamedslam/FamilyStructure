@@ -11,14 +11,15 @@ namespace FamilyStructure_1
     {
         static ClsFamilyData _ClsFamily = new ClsFamilyData();
         static   ClsPersonalInfo _DataPerson;
-
         public static void DisplayAllRelationId()
-        {
-            Console.Write("Select Relation Type: \n");
+        {           
+           // Console.Write("Select Relation Type: \n");
             ClsPersonalInfo.RelationlistName _typeRelation = ClsPersonalInfo.RelationlistName.Person;
             var _enum = Enum.GetNames(_typeRelation.GetType());
             for (int i = 0; i < _enum.Length; i++)
+            {
                 Console.Write(i.ToString() + " " + _enum[i] + "\n");
+            }
         }
         public static int Count
         {
@@ -34,7 +35,6 @@ namespace FamilyStructure_1
                     return 1;
             }
         } 
- 
         public static List<ClsPersonalInfo>  GetPerson(string Name)
         {
             var _rst = new List<ClsPersonalInfo>(); 
@@ -64,14 +64,17 @@ namespace FamilyStructure_1
            
 
         }
+        public static bool AddFamilyMembars(int IdParant, ClsPersonalInfo _DataPerson)
+        {
+            return _ClsFamily.AddFamilyMembars (IdParant,_DataPerson);
+            /////////////////////////////////////////////////////////////////////////////////////////
+        }
         public static bool DeletePerson(int Id)
         {
 
             var Person = _ClsFamily.PersonsDataList.FirstOrDefault(m => m.Id == Id);
-            ///////////////////////////////////////////////////////////////////////////////
-            ///
+            ///////////////////////////////////////////////////////////////////////////////         
             return _ClsFamily.DeletePerson(Person);
-
             //////////////////////////////////////////////////////////////////////////////
         }
         public static List<ClsPersonalInfo> DisplayRelation(int IdRelation)
@@ -95,6 +98,7 @@ namespace FamilyStructure_1
             else
                 return ClsPersonalInfo.GenderType.Unknown;
         }
+
 
     }
 }

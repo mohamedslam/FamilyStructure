@@ -45,10 +45,10 @@ namespace FamilyStructure_1.Class
         public virtual DateTime BirthDate { get; set; }         
         public virtual RelationlistName RelationName { get; set; }
         public virtual GenderType Gender { get; set; } 
-        public  List<ClsPersonalInfo> Family = new List<ClsPersonalInfo>();
+        public  List<ClsPersonalInfo> PersonsDataList = new List<ClsPersonalInfo>();
         public IEnumerator<ClsPersonalInfo> GetEnumerator()
         {
-            return Family.GetEnumerator();
+            return PersonsDataList.GetEnumerator();
         }
         
 

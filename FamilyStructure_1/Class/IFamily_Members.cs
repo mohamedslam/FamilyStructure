@@ -14,11 +14,12 @@ namespace FamilyStructure_1.Class
         bool DeletePerson(ClsPersonalInfo Person);
 
         bool UpdatePerson(ClsPersonalInfo Person);
-
+        bool AddFamilyMembars(int IdParant, ClsPersonalInfo _DataPerson);
         List<ClsPersonalInfo> FindPerson(string Name);
         List<T> LoadData<T>(string fileName);
-       
- 
+
+
+
 
     }
 }

@@ -9,98 +9,9 @@ using static FamilyStructure_1.Class.ClsPersonalInfo;
 
 namespace FamilyStructure_1.Class
 {
-    public class ClsFamilyData : IFamily_Members
+    public class ClsFamilyData : ClsPersonalInfo, IFamily_Members
     {
-        public List<ClsPersonalInfo> PersonsDataList;
-
-        public ClsFamilyData()
-        {
-            PersonsDataList = new List<ClsPersonalInfo>() {
-          new ClsPersonalInfo()
-          {
-              Id = 1, Gender =  GenderType.Male, FirstName = "Mohamed", LastName = "Sallam",  RelationName = ClsPersonalInfo.RelationlistName.Person, BirthDate = DateTime.Parse("02/02/1980")
-          },
-          new ClsPersonalInfo()
-          {
-              Id = 2, Gender = GenderType.Male , FirstName = "Alsayied", LastName = "Sallam",   RelationName = ClsPersonalInfo.RelationlistName.Father,   BirthDate = DateTime.Parse("10/11/1985")
-          },
-          new ClsPersonalInfo()
-          {
-              Id = 3, Gender = GenderType.Female , FirstName = "Magda", LastName = "AlGohary",   RelationName = ClsPersonalInfo.RelationlistName.Mother,   BirthDate = DateTime.Parse("10/11/1985")
-          },
-           new ClsPersonalInfo()
-          {
-              Id = 4, Gender = GenderType.Male , FirstName = "Ahmed", LastName = "Sallam",    RelationName = ClsPersonalInfo.RelationlistName.Brother,   BirthDate = DateTime.Parse("10/11/1985")
-          },
-            new ClsPersonalInfo()
-          {
-              Id = 5, Gender = GenderType.Female , FirstName = "Hoda", LastName = "Sallam",  RelationName = ClsPersonalInfo.RelationlistName.Sister,   BirthDate = DateTime.Parse("10/11/1986")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 6, Gender = GenderType.Male , FirstName = "Hussien", LastName = "Sallam",  RelationName = ClsPersonalInfo.RelationlistName.GrandFather,   BirthDate = DateTime.Parse("10/11/1922")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 7, Gender = GenderType.Female , FirstName = "Fawozia", LastName = "Sallam",   RelationName = ClsPersonalInfo.RelationlistName.GrandMother,   BirthDate = DateTime.Parse("10/11/1930")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 8, Gender = GenderType.Female , FirstName = "Ksenia", LastName = "Youryvnia",  RelationName = ClsPersonalInfo.RelationlistName.Wife,   BirthDate = DateTime.Parse("15/3/1981")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 9, Gender = GenderType.Female , FirstName = "Gogo", LastName = "Mohamed",  RelationName = ClsPersonalInfo.RelationlistName.Daughter,   BirthDate = DateTime.Parse("18/02/2005")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 10, Gender = GenderType.Female , FirstName = "Mona", LastName = "Mohamed", RelationName = ClsPersonalInfo.RelationlistName.Daughter,   BirthDate = DateTime.Parse("10/07/2006")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 11, Gender = GenderType.Female , FirstName = "Mariam", LastName = "Mohamed",   RelationName = ClsPersonalInfo.RelationlistName.Daughter,   BirthDate = DateTime.Parse("10/07/2013")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 12, Gender = GenderType.Male , FirstName = "Yousef", LastName = "Mohamed",  RelationName = ClsPersonalInfo.RelationlistName.Son ,   BirthDate = DateTime.Parse("10/07/2014")
-          },
-              new ClsPersonalInfo()
-          {
-              Id = 13, Gender = GenderType.Male , FirstName = "Hesham", LastName = "Agohary",  RelationName = ClsPersonalInfo.RelationlistName.Uncle_MotherBrother ,   BirthDate = DateTime.Parse("10/07/1960")
-          },
-              new ClsPersonalInfo()
-          {
-              Id =14, Gender = GenderType.Male , FirstName = "AboAlela", LastName = "Agohary",   RelationName = ClsPersonalInfo.RelationlistName.Uncle_MotherBrother ,   BirthDate = DateTime.Parse("10/07/1950")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 15, Gender = GenderType.Male , FirstName = "Ebrahiem", LastName = "Sallam", RelationName = ClsPersonalInfo.RelationlistName.Uncle_FatherBrother ,   BirthDate = DateTime.Parse("10/07/1950")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 16, Gender = GenderType.Female , FirstName = "Sanaa", LastName = "Sallam", RelationName = ClsPersonalInfo.RelationlistName.Aunt_FatherSister ,   BirthDate = DateTime.Parse("10/07/1950")
-          },
-                 new ClsPersonalInfo()
-          {
-              Id = 17, Gender = GenderType.Female , FirstName = "Zinab", LastName = "Sallam", RelationName = ClsPersonalInfo.RelationlistName.Aunt_FatherSister ,   BirthDate = DateTime.Parse("10/07/1950")
-          },
-             new ClsPersonalInfo()
-          {
-              Id = 18, Gender = GenderType.Female , FirstName = "Zinab", LastName = "Algohary", RelationName = ClsPersonalInfo.RelationlistName.Aunt_MotherSister ,   BirthDate = DateTime.Parse("10/07/1950")
-          },
-                new ClsPersonalInfo()
-          {
-              Id = 19, Gender = GenderType.Female , FirstName = "Hanaa", LastName = "Algohary", RelationName = ClsPersonalInfo.RelationlistName.Aunt_MotherSister ,   BirthDate = DateTime.Parse("10/07/1950")
-          },
-        new ClsPersonalInfo()
-          {
-              Id = 20, Gender = GenderType.Female , FirstName = "KseniaMama", LastName = "Yourivna", RelationName = ClsPersonalInfo.RelationlistName.Aunt_MotherSister ,   BirthDate = DateTime.Parse("01/01/1940")
-          },
-
-
-            };
-
-        }
+ 
         public  bool AddPerson(ClsPersonalInfo Person)
         {
             bool _resut = false;
@@ -250,6 +161,15 @@ namespace FamilyStructure_1.Class
             }
         }
 
-        
+        public bool AddFamilyMembars(int IdParant, ClsPersonalInfo _DataPerson)
+        {
+            var _rst = new ClsPersonalInfo();
+            ///////////
+
+            _rst = FindPerson(IdParant);
+            /////////Add new Member To Family ///////
+            _rst.PersonsDataList.Add(_DataPerson);
+            return true;
+        }
     }
 }

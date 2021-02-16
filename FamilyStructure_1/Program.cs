@@ -79,7 +79,6 @@ namespace FamilyStructure_1
                         
                     }
                 }
-
                 else if (Command.Key == ConsoleKey.F3)
                 {
 
